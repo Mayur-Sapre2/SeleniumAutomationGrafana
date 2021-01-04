@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="10393" started-at="2021-01-01T16:31:23 IST" finished-at="2021-01-01T16:31:33 IST">
+  <suite name="Suite" duration-ms="6297" started-at="2021-01-04T10:37:41 IST" finished-at="2021-01-04T10:37:48 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="10393" started-at="2021-01-01T16:31:23 IST" finished-at="2021-01-01T16:31:33 IST">
+    <test name="Test" duration-ms="6297" started-at="2021-01-04T10:37:41 IST" finished-at="2021-01-04T10:37:48 IST">
       <class name="com.selenium.LoginPageTest">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.selenium.LoginPageTest@10bbd20a]" name="openBrowser" duration-ms="10365" started-at="2021-01-01T16:31:23 IST" finished-at="2021-01-01T16:31:33 IST">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.selenium.LoginPageTest@10bbd20a]" name="openBrowser" duration-ms="6268" started-at="2021-01-04T10:37:41 IST" finished-at="2021-01-04T10:37:48 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
