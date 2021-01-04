@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite">
-  <test thread-count="5" name="Test">
+  <test thread-count="4" name="Test" parallel="methods">
     <classes>
       <class name="com.selenium.LoginPageTest"/>
+      <class name="com.selenium.HomePageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
+
+<!-- When we are giveing thred count as 2,that time its trying to access chrome from class Driver and driver is static var.
+	thats why we are getting error while exec. cases paralley-->

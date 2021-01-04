@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
 import com.selenium.driver.Driver;
+import com.selenium.driver.DriverManager;
 
 public final class HomePageTest extends BaseTest {
 
@@ -14,6 +15,11 @@ public final class HomePageTest extends BaseTest {
 
 	@Test
 	public void testHomepage() {
-		Driver.driver.findElement(By.name("q")).sendKeys("Testing", Keys.ENTER);
+		DriverManager.getDriver().findElement(By.name("q")).sendKeys("Testing", Keys.ENTER);
+	}
+	
+	@Test
+	public void testHomepageTest() {
+		DriverManager.getDriver().findElement(By.name("q")).sendKeys("Sapre", Keys.ENTER);
 	}
 }

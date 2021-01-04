@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
-import com.selenium.driver.Driver;
+import com.selenium.driver.DriverManager;
 
 public final class LoginPageTest extends BaseTest {
 	
@@ -27,11 +27,6 @@ public final class LoginPageTest extends BaseTest {
 		 * new FrameworkConstants(); this will give error becasue we are restricting
 		 * user to not create object of the class by declaring private cons.
 		 */
-		Driver.driver.findElement(By.name("q")).sendKeys("Mayur",Keys.ENTER);
-	}
-	
-	@Test
-	public void testBrowser() {
-		Driver.driver.findElement(By.name("q")).sendKeys("Sapre",Keys.ENTER);
+		DriverManager.getDriver().findElement(By.name("q")).sendKeys("Mayur",Keys.ENTER);
 	}
 }
