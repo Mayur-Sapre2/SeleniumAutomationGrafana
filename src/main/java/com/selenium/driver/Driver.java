@@ -1,10 +1,13 @@
 package com.selenium.driver;
 
+import java.io.IOException;
 import java.util.Objects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.selenium.constants.FrameworkConstants;
+
+import com.selenium.utils.ReadPropertyFile;
 
 
 public final class Driver {
@@ -13,12 +16,12 @@ public final class Driver {
 		
 	}
 
-	public static void initDriver() {
+	public static void initDriver() throws Exception {
 		if(Objects.isNull(DriverManager.getDriver())) { //it will avoid to relaucnh browser
 			System.setProperty("webdriver.chrome.driver",FrameworkConstants.getChromeDriverpath()); 
 			WebDriver driver=new ChromeDriver();
 			DriverManager.setDriver(driver);
-			DriverManager.getDriver().get("http://www.google.com");
+			DriverManager.getDriver().get(ReadPropertyFile.getValue("url"));
 		}
 	}
 

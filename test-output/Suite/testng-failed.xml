@@ -3,6 +3,13 @@
 <suite name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)" parallel="methods">
     <classes>
+      <class name="com.selenium.LoginPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- com.selenium.LoginPageTest -->
       <class name="com.selenium.HomePageTest">
         <methods>
           <include name="testHomepageTest"/>
