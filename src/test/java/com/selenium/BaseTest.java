@@ -1,24 +1,24 @@
 package com.selenium;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.selenium.constants.FrameworkConstants;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-public class BaseTest {
+import com.selenium.driver.Driver;
 
-	WebDriver driver;
+public class BaseTest {
+	
+	protected BaseTest() {
+		
+	}
 
 	@BeforeMethod
 	public void setUp() {
-		System.setProperty("webdriver.chrome.driver",FrameworkConstants.getChromeDriverpath()); 
-		WebDriver driver=new ChromeDriver();
-		driver.get("http://www.google.com");
+		Driver.initDriver();
 	}
 
 	@AfterMethod
 	public void tearDown() {
-		driver.quit();
+		Driver.quitDriver();
 	}
 }

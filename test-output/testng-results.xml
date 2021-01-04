@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="6297" started-at="2021-01-04T10:37:41 IST" finished-at="2021-01-04T10:37:48 IST">
+  <suite name="Suite" duration-ms="19584" started-at="2021-01-04T14:21:26 IST" finished-at="2021-01-04T14:21:46 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="6297" started-at="2021-01-04T10:37:41 IST" finished-at="2021-01-04T10:37:48 IST">
+    <test name="Test" duration-ms="19584" started-at="2021-01-04T14:21:26 IST" finished-at="2021-01-04T14:21:46 IST">
       <class name="com.selenium.LoginPageTest">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.selenium.LoginPageTest@10bbd20a]" name="openBrowser" duration-ms="6268" started-at="2021-01-04T10:37:41 IST" finished-at="2021-01-04T10:37:48 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.selenium.LoginPageTest@6895a785]" name="setUp" is-config="true" duration-ms="6311" started-at="2021-01-04T14:21:26 IST" finished-at="2021-01-04T14:21:32 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.selenium.LoginPageTest@6895a785]" name="openBrowser" duration-ms="1455" started-at="2021-01-04T14:21:32 IST" finished-at="2021-01-04T14:21:34 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.selenium.LoginPageTest@6895a785]" name="tearDown" is-config="true" duration-ms="957" started-at="2021-01-04T14:21:34 IST" finished-at="2021-01-04T14:21:35 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.selenium.LoginPageTest@6895a785]" name="setUp" is-config="true" duration-ms="6191" started-at="2021-01-04T14:21:35 IST" finished-at="2021-01-04T14:21:41 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testBrowser()[pri:0, instance:com.selenium.LoginPageTest@6895a785]" name="testBrowser" duration-ms="3505" started-at="2021-01-04T14:21:41 IST" finished-at="2021-01-04T14:21:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBrowser -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.selenium.LoginPageTest@6895a785]" name="tearDown" is-config="true" duration-ms="1131" started-at="2021-01-04T14:21:44 IST" finished-at="2021-01-04T14:21:46 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.selenium.LoginPageTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

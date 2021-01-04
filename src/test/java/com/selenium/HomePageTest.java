@@ -4,10 +4,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
-public class HomePageTest extends BaseTest{
+import com.selenium.driver.Driver;
+
+public final class HomePageTest extends BaseTest {
+
+	private HomePageTest() {
+
+	}
 
 	@Test
 	public void testHomepage() {
-		driver.findElement(By.name("q")).sendKeys("Testing",Keys.ENTER);
+		Driver.driver.findElement(By.name("q")).sendKeys("Testing", Keys.ENTER);
 	}
 }
