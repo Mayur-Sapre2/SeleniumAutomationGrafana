@@ -1,6 +1,5 @@
 package com.selenium.driver;
 
-import java.io.IOException;
 import java.util.Objects;
 
 import org.openqa.selenium.WebDriver;
@@ -21,7 +20,7 @@ public final class Driver {
 			System.setProperty("webdriver.chrome.driver",FrameworkConstants.getChromeDriverpath()); 
 			WebDriver driver=new ChromeDriver();
 			DriverManager.setDriver(driver);
-			DriverManager.getDriver().get(ReadPropertyFile.getValue("url"));
+			DriverManager.getDriver().get(ReadPropertyFile.get("url"));
 		}
 	}
 

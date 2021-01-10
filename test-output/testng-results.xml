@@ -1,47 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="18634" started-at="2021-01-04T18:49:33 IST" finished-at="2021-01-04T18:49:52 IST">
+  <suite name="Suite" duration-ms="17569" started-at="2021-01-10T11:51:59 IST" finished-at="2021-01-10T11:52:17 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="18634" started-at="2021-01-04T18:49:33 IST" finished-at="2021-01-04T18:49:52 IST">
-      <class name="com.selenium.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.selenium.LoginPageTest@56aac163]" name="setUp" is-config="true" duration-ms="13287" started-at="2021-01-04T18:49:33 IST" finished-at="2021-01-04T18:49:47 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.selenium.LoginPageTest@56aac163]" name="openBrowser" duration-ms="2128" started-at="2021-01-04T18:49:47 IST" finished-at="2021-01-04T18:49:49 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.selenium.LoginPageTest@56aac163]" name="tearDown" is-config="true" duration-ms="3053" started-at="2021-01-04T18:49:49 IST" finished-at="2021-01-04T18:49:52 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.selenium.LoginPageTest -->
+    <test name="Test" duration-ms="17569" started-at="2021-01-10T11:51:59 IST" finished-at="2021-01-10T11:52:17 IST">
       <class name="com.selenium.HomePageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.selenium.HomePageTest@1f7030a6]" name="setUp" is-config="true" duration-ms="13792" started-at="2021-01-04T18:49:33 IST" finished-at="2021-01-04T18:49:47 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.selenium.HomePageTest@3b088d51]" name="setUp" is-config="true" duration-ms="11078" started-at="2021-01-10T11:51:59 IST" finished-at="2021-01-10T11:52:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.selenium.HomePageTest@1f7030a6]" name="setUp" is-config="true" duration-ms="13017" started-at="2021-01-04T18:49:33 IST" finished-at="2021-01-04T18:49:46 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.selenium.HomePageTest@3b088d51]" name="setUp" is-config="true" duration-ms="11091" started-at="2021-01-10T11:51:59 IST" finished-at="2021-01-10T11:52:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testHomepage()[pri:0, instance:com.selenium.HomePageTest@1f7030a6]" name="testHomepage" duration-ms="3727" started-at="2021-01-04T18:49:46 IST" finished-at="2021-01-04T18:49:50 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testHomepage -->
-        <test-method status="PASS" signature="testHomepageTest()[pri:0, instance:com.selenium.HomePageTest@1f7030a6]" name="testHomepageTest" duration-ms="2028" started-at="2021-01-04T18:49:47 IST" finished-at="2021-01-04T18:49:49 IST">
+        <test-method status="PASS" signature="testHomepageTest()[pri:0, instance:com.selenium.HomePageTest@3b088d51]" name="testHomepageTest" duration-ms="5073" started-at="2021-01-10T11:52:10 IST" finished-at="2021-01-10T11:52:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHomepageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.selenium.HomePageTest@1f7030a6]" name="tearDown" is-config="true" duration-ms="1593" started-at="2021-01-04T18:49:49 IST" finished-at="2021-01-04T18:49:51 IST">
+        <test-method status="PASS" signature="testHomepage()[pri:0, instance:com.selenium.HomePageTest@3b088d51]" name="testHomepage" duration-ms="3665" started-at="2021-01-10T11:52:10 IST" finished-at="2021-01-10T11:52:14 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHomepage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.selenium.HomePageTest@3b088d51]" name="tearDown" is-config="true" duration-ms="1403" started-at="2021-01-10T11:52:14 IST" finished-at="2021-01-10T11:52:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.selenium.HomePageTest@1f7030a6]" name="tearDown" is-config="true" duration-ms="1840" started-at="2021-01-04T18:49:50 IST" finished-at="2021-01-04T18:49:52 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.selenium.HomePageTest@3b088d51]" name="tearDown" is-config="true" duration-ms="1391" started-at="2021-01-10T11:52:15 IST" finished-at="2021-01-10T11:52:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
