@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 import com.selenium.driver.DriverManager;
 
-public final class OrangeHRMLoginPage {
+public final class OrangeHRMLoginPage extends BasePage  {
 
 	/*
 	 * id 
@@ -20,22 +20,22 @@ public final class OrangeHRMLoginPage {
 	private final By loginbtn=By.id("btnLogin");
 	
 	public OrangeHRMLoginPage enterUsername(String uname) {
-		DriverManager.getDriver().findElement(txt_username).sendKeys(uname);
+		sendKeys(txt_username,uname);
 		return this;
 	}
 	
 	public OrangeHRMLoginPage enterPassword(String pass) {
-		DriverManager.getDriver().findElement(txt_password).sendKeys(pass);
+		sendKeys(txt_password,pass);
 		return this;
 	}
 	
 	public OrangeHRMHomepage clickLogin() {
-		DriverManager.getDriver().findElement(loginbtn).click();
+		click(loginbtn);
 		return new OrangeHRMHomepage();
 	}
 	
 	public String getTitle() {
-		return DriverManager.getDriver().getTitle();
+		return getPageTitle();
 	}
 	
 }

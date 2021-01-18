@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="16963" started-at="2021-01-18T17:35:32 IST" finished-at="2021-01-18T17:35:49 IST">
+  <suite name="Suite" duration-ms="17452" started-at="2021-01-18T19:02:43 IST" finished-at="2021-01-18T19:03:01 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="16963" started-at="2021-01-18T17:35:32 IST" finished-at="2021-01-18T17:35:49 IST">
+    <test name="Test" duration-ms="17452" started-at="2021-01-18T19:02:43 IST" finished-at="2021-01-18T19:03:01 IST">
       <class name="com.selenium.OranegHrmTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.selenium.OranegHrmTest@1f7030a6]" name="setUp" is-config="true" duration-ms="10430" started-at="2021-01-18T17:35:33 IST" finished-at="2021-01-18T17:35:43 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.selenium.OranegHrmTest@1f7030a6]" name="setUp" is-config="true" duration-ms="9789" started-at="2021-01-18T19:02:43 IST" finished-at="2021-01-18T19:02:53 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginlogouttest()[pri:0, instance:com.selenium.OranegHrmTest@1f7030a6]" name="loginlogouttest" duration-ms="5362" started-at="2021-01-18T17:35:43 IST" finished-at="2021-01-18T17:35:48 IST">
+        <test-method status="PASS" signature="loginlogouttest()[pri:0, instance:com.selenium.OranegHrmTest@1f7030a6]" name="loginlogouttest" duration-ms="6462" started-at="2021-01-18T19:02:53 IST" finished-at="2021-01-18T19:03:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginlogouttest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.selenium.OranegHrmTest@1f7030a6]" name="tearDown" is-config="true" duration-ms="1135" started-at="2021-01-18T17:35:48 IST" finished-at="2021-01-18T17:35:49 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.selenium.OranegHrmTest@1f7030a6]" name="tearDown" is-config="true" duration-ms="1173" started-at="2021-01-18T19:03:00 IST" finished-at="2021-01-18T19:03:01 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
