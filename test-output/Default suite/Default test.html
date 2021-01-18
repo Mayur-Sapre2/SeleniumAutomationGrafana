@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Jan 10 11:50:03 IST 2021</td>
+<td>Started on:</td><td>Thu Jan 14 15:58:28 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>30 seconds (30466 ms)</td>
+<tr><td>Total time:</td><td>14 seconds (14813 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,20 +75,28 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.selenium.HomePageTest.testHomepageTest()'><b>testHomepageTest</b><br>Test class: com.selenium.HomePageTest</td>
-<td><div><pre>java.lang.AssertionError: 
-Expected size:&lt;11&gt; but was:&lt;10&gt; in:
-&lt;[[[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span]]&gt;
-	at com.selenium.HomePageTest.testHomepageTest(HomePageTest.java:58)
+<td title='com.selenium.OranegHrmTest.loginlogouttest()'><b>loginlogouttest</b><br>Test class: com.selenium.OranegHrmTest</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=87.0.4280.88)
+Build info: version: &apos;4.0.0-alpha-1&apos;, revision: &apos;d1d3728cae&apos;, time: &apos;2019-04-24T13:42:21&apos;
+System info: host: &apos;ARPGL001447&apos;, ip: &apos;10.196.155.252&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\MAYUR_~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62429}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 5b29ed0b4d17bc0eeddfeca0d65c6348
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:190)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:124)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:308)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at com.selenium.pages.OrangeHRMHomepage.clickLogout(OrangeHRMHomepage.java:18)
+	at com.selenium.OranegHrmTest.loginlogouttest(OranegHrmTest.java:18)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -117,20 +125,28 @@ Expected size:&lt;11&gt; but was:&lt;10&gt; in:
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace776484396", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace776484396'><pre>java.lang.AssertionError: 
-Expected size:&lt;11&gt; but was:&lt;10&gt; in:
-&lt;[[[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span],
-    [[ChromeDriver: chrome on WINDOWS (a19afa635c737f2e3ab4d898b91c4859)] -&gt; xpath: //h3/span]]&gt;
-	at com.selenium.HomePageTest.testHomepageTest(HomePageTest.java:58)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1842853283", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1842853283'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=87.0.4280.88)
+Build info: version: &apos;4.0.0-alpha-1&apos;, revision: &apos;d1d3728cae&apos;, time: &apos;2019-04-24T13:42:21&apos;
+System info: host: &apos;ARPGL001447&apos;, ip: &apos;10.196.155.252&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\MAYUR_~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62429}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 5b29ed0b4d17bc0eeddfeca0d65c6348
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:190)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:124)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:308)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at com.selenium.pages.OrangeHRMHomepage.clickLogout(OrangeHRMHomepage.java:18)
+	at com.selenium.OranegHrmTest.loginlogouttest(OranegHrmTest.java:18)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -160,21 +176,8 @@ Expected size:&lt;11&gt; but was:&lt;10&gt; in:
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>4</td>
-<td>com.selenium.HomePageTest@15d0c81b</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.selenium.HomePageTest.testHomepage()'><b>testHomepage</b><br>Test class: com.selenium.HomePageTest</td>
-<td></td>
-<td>3</td>
-<td>com.selenium.HomePageTest@15d0c81b</td></tr>
+<td>5</td>
+<td>com.selenium.OranegHrmTest@394e1a0f</td></tr>
 </table><p>
 </body>
 </html>

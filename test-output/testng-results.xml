@@ -1,37 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="17569" started-at="2021-01-10T11:51:59 IST" finished-at="2021-01-10T11:52:17 IST">
+  <suite name="Suite" duration-ms="16963" started-at="2021-01-18T17:35:32 IST" finished-at="2021-01-18T17:35:49 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="17569" started-at="2021-01-10T11:51:59 IST" finished-at="2021-01-10T11:52:17 IST">
-      <class name="com.selenium.HomePageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.selenium.HomePageTest@3b088d51]" name="setUp" is-config="true" duration-ms="11078" started-at="2021-01-10T11:51:59 IST" finished-at="2021-01-10T11:52:10 IST">
+    <test name="Test" duration-ms="16963" started-at="2021-01-18T17:35:32 IST" finished-at="2021-01-18T17:35:49 IST">
+      <class name="com.selenium.OranegHrmTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.selenium.OranegHrmTest@1f7030a6]" name="setUp" is-config="true" duration-ms="10430" started-at="2021-01-18T17:35:33 IST" finished-at="2021-01-18T17:35:43 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.selenium.HomePageTest@3b088d51]" name="setUp" is-config="true" duration-ms="11091" started-at="2021-01-10T11:51:59 IST" finished-at="2021-01-10T11:52:10 IST">
+        <test-method status="PASS" signature="loginlogouttest()[pri:0, instance:com.selenium.OranegHrmTest@1f7030a6]" name="loginlogouttest" duration-ms="5362" started-at="2021-01-18T17:35:43 IST" finished-at="2021-01-18T17:35:48 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testHomepageTest()[pri:0, instance:com.selenium.HomePageTest@3b088d51]" name="testHomepageTest" duration-ms="5073" started-at="2021-01-10T11:52:10 IST" finished-at="2021-01-10T11:52:15 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testHomepageTest -->
-        <test-method status="PASS" signature="testHomepage()[pri:0, instance:com.selenium.HomePageTest@3b088d51]" name="testHomepage" duration-ms="3665" started-at="2021-01-10T11:52:10 IST" finished-at="2021-01-10T11:52:14 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testHomepage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.selenium.HomePageTest@3b088d51]" name="tearDown" is-config="true" duration-ms="1403" started-at="2021-01-10T11:52:14 IST" finished-at="2021-01-10T11:52:15 IST">
+        </test-method> <!-- loginlogouttest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.selenium.OranegHrmTest@1f7030a6]" name="tearDown" is-config="true" duration-ms="1135" started-at="2021-01-18T17:35:48 IST" finished-at="2021-01-18T17:35:49 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.selenium.HomePageTest@3b088d51]" name="tearDown" is-config="true" duration-ms="1391" started-at="2021-01-10T11:52:15 IST" finished-at="2021-01-10T11:52:17 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.selenium.HomePageTest -->
+      </class> <!-- com.selenium.OranegHrmTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)" parallel="methods">
     <classes>
-      <class name="com.selenium.HomePageTest">
+      <class name="com.selenium.OranegHrmTest">
         <methods>
-          <include name="testHomepageTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="loginlogouttest"/>
         </methods>
-      </class> <!-- com.selenium.HomePageTest -->
+      </class> <!-- com.selenium.OranegHrmTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

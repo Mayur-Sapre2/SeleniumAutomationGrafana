@@ -2,7 +2,7 @@
 <suite name="Suite">
   <test thread-count="2" name="Test" parallel="methods">
     <classes>
-      <class name="com.selenium.HomePageTest"/>
+      <class name="com.selenium.OranegHrmTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

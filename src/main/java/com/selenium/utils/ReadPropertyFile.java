@@ -24,7 +24,7 @@ public final class ReadPropertyFile {
 			FileInputStream fis=new FileInputStream(FrameworkConstants.getConfigfilepath() );
 			prop.load(fis);
 			for(Map.Entry<Object, Object> entry:prop.entrySet()) {
-				CONFIGMAP.put(String.valueOf(entry.getKey()),String.valueOf(entry.getValue()));
+				CONFIGMAP.put(String.valueOf(entry.getKey()),String.valueOf(entry.getValue()).trim());
 			}
 		}
 		catch(FileNotFoundException e) {
