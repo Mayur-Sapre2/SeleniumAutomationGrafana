@@ -20,17 +20,17 @@ public final class OrangeHRMLoginPage extends BasePage  {
 	private final By loginbtn=By.id("btnLogin");
 	
 	public OrangeHRMLoginPage enterUsername(String uname) {
-		sendKeys(txt_username,uname);
+		sendKeys(txt_username,uname,"presence");
 		return this;
 	}
 	
 	public OrangeHRMLoginPage enterPassword(String pass) {
-		sendKeys(txt_password,pass);
+		sendKeys(txt_password,pass,"presence");
 		return this;
 	}
 	
 	public OrangeHRMHomepage clickLogin() {
-		click(loginbtn);
+		click(loginbtn,"clickable");
 		return new OrangeHRMHomepage();
 	}
 	

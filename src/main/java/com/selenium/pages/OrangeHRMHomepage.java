@@ -12,14 +12,12 @@ public class OrangeHRMHomepage extends BasePage{
 	private final By link_logout=By.xpath("//a[text()='Logout']");
 
 	public OrangeHRMHomepage clickWelcome() {
-		click(link_welcome);
+		click(link_welcome,"clickable");
 		return this;
 	}
 	
 	public OrangeHRMLoginPage clickLogout() {
-		new WebDriverWait(DriverManager.getDriver(), 10)
-		.until(ExpectedConditions.elementToBeClickable(link_logout));
-		click(link_logout);
+		click(link_logout,"clickable");
 		return new OrangeHRMLoginPage();
 	}
 }
