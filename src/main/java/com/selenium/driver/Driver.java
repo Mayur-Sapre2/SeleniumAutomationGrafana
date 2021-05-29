@@ -4,23 +4,23 @@ import java.util.Objects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.selenium.constants.FrameworkConstants;
 
-import com.selenium.utils.ReadPropertyFile;
-
+import com.selenium.constant.FrameworkConstant;
+import com.selenium.enus.ConfigProperties;
+import com.selenium.utils.PropertyUtils;
 
 public final class Driver {
 	
-	public Driver() {
+	private Driver() {
 		
 	}
 
 	public static void initDriver() throws Exception {
-		if(Objects.isNull(DriverManager.getDriver())) { //it will avoid to relaucnh browser
-			System.setProperty("webdriver.chrome.driver",FrameworkConstants.getChromeDriverpath()); 
+		if(Objects.isNull(DriverManager.getDriver())) {
+			System.setProperty("webdriver.chrome.driver",FrameworkConstant.getChromedriverpath());
 			WebDriver driver=new ChromeDriver();
 			DriverManager.setDriver(driver);
-			DriverManager.getDriver().get(ReadPropertyFile.get("url"));
+			DriverManager.getDriver().get(PropertyUtils.getValue(ConfigProperties.URL));
 		}
 	}
 
@@ -30,6 +30,4 @@ public final class Driver {
 			DriverManager.unload();
 		}
 	}
-
-
 }

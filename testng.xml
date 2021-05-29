@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite">
+	<listeners>
+    	<listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener" />
+    </listeners>
   <test thread-count="2" name="Test" parallel="methods">
     <classes>
-      <class name="com.selenium.OranegHrmTest"/>
+      <class name="com.selenium.AccountManagerLoginPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

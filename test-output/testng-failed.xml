@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)" parallel="methods">
     <classes>
-      <class name="com.selenium.OranegHrmTest">
+      <class name="com.selenium.AccountManagerLoginPageTest">
         <methods>
-          <include name="setUp"/>
+          <include name="loginlogoutTest" invocation-numbers="1"/>
+          <include name="setup"/>
           <include name="tearDown"/>
-          <include name="loginlogouttest"/>
         </methods>
-      </class> <!-- com.selenium.OranegHrmTest -->
+      </class> <!-- com.selenium.AccountManagerLoginPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

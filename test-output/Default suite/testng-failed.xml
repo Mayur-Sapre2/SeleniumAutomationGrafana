@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.selenium.OranegHrmTest">
+      <class name="com.selenium.AccountManagerLoginPageTest">
         <methods>
-          <include name="setUp"/>
+          <include name="loginlogoutTest"/>
+          <include name="setup"/>
           <include name="tearDown"/>
-          <include name="loginlogouttest"/>
         </methods>
-      </class> <!-- com.selenium.OranegHrmTest -->
+      </class> <!-- com.selenium.AccountManagerLoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

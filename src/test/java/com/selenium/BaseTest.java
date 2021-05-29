@@ -12,12 +12,13 @@ public class BaseTest {
 	}
 
 	@BeforeMethod
-	protected void setUp() throws Exception {
+	protected void setup() throws Exception {
 		Driver.initDriver();
 	}
 
 	@AfterMethod
 	protected void tearDown() {
 		Driver.quitDriver();
+		//multithread part need to check
 	}
 }
