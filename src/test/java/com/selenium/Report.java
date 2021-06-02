@@ -15,7 +15,7 @@ public class Report {
 	@Test
 	public void attachLogo() throws IOException {
 	ExtentReports extent=new ExtentReports();
-	ExtentSparkReporter spark=new ExtentSparkReporter("index.html");
+	ExtentSparkReporter spark=new ExtentSparkReporter("Bhoomi.html");
 	spark.loadXMLConfig(new File("extentconfig.xml"));
 	extent.attachReporter(spark);
 	

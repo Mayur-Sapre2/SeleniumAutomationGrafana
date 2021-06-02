@@ -3,6 +3,7 @@ package com.selenium.pages;
 import org.openqa.selenium.By;
 
 import com.selenium.enus.WaitStrategy;
+import com.selenium.reports.ExtentLogger;
 
 public final class AccountManagerLoginPage extends Basepage {
 
@@ -13,23 +14,25 @@ public final class AccountManagerLoginPage extends Basepage {
 
 	//Method chain
 	
-	public AccountManagerLoginPage enterUserName(String username) {
-		sendkeys(txtBoxUsername, username, WaitStrategy.PRESENCE);
+	public AccountManagerLoginPage enterUserName(String username) throws Exception {
+		sendkeys(txtBoxUsername, username, WaitStrategy.PRESENCE,"Username Textbox");
 		return this;
 	}
 	
-	public AccountManagerLoginPage clickContinue () {
-		click(btnContinue, WaitStrategy.CLICKABLE);
+	//username enetered successfully: 
+	
+	public AccountManagerLoginPage clickContinue () throws Exception {
+		click(btnContinue, WaitStrategy.CLICKABLE,"Continue button");
 		return this;
 	}
 
-	public AccountManagerLoginPage enterPassword(String password) {
-		sendkeys(txtBoxpassword, password, WaitStrategy.PRESENCE);
+	public AccountManagerLoginPage enterPassword(String password) throws Exception {
+		sendkeys(txtBoxpassword, password, WaitStrategy.PRESENCE,"Password Textbox");
 		return this;
 	}
 
-	public ApplicationPanelPage clickLoginBtn() {
-		click(btnLogin, WaitStrategy.CLICKABLE);
+	public ApplicationPanelPage clickLoginBtn() throws Exception {
+		click(btnLogin, WaitStrategy.CLICKABLE,"Login Button");
 		return new ApplicationPanelPage();
 	}
 }

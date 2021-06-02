@@ -12,7 +12,8 @@ public class AccountManagerLoginPageTest extends BaseTest {
 	}
 	
 	@Test(dataProvider = "LoginData")
-	public void loginlogoutTest(String username,String password) {		
+	public void loginlogoutTest(String username,String password) throws Exception {		
+		//ExtentReport.createTest("loginLogoutTest");
 		new AccountManagerLoginPage(). enterUserName(username)
 				.clickContinue()
 				.enterPassword(password)
@@ -21,7 +22,7 @@ public class AccountManagerLoginPageTest extends BaseTest {
 				.logout();
 	}
 	
-	@DataProvider(name="LoginData")
+	@DataProvider(name="LoginData",parallel=true)
 	public Object[][] getData(){
 		return new Object[][] {
 			{"QATHOR1005MIG","ThorMigration@12345"},

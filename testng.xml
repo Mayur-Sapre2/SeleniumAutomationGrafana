@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite">
 	<listeners>
-    	<listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener" />
+    	<listener class-name="com.selenium.listeners.ListnerClass" />
     </listeners>
-  <test thread-count="2" name="Test" parallel="methods">
+  <test thread-count="1" name="Test" parallel="methods">
     <classes>
       <class name="com.selenium.AccountManagerLoginPageTest"/>
     </classes>

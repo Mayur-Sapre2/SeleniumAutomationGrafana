@@ -3,8 +3,10 @@ package com.selenium.pages;
 import org.openqa.selenium.By;
 
 import com.selenium.driver.DriverManager;
+import com.selenium.enus.WaitStrategy;
+import com.selenium.reports.ExtentLogger;
 
-public class ApplicationPanelPage {
+public class ApplicationPanelPage extends Basepage {
 	
 	ApplicationPanelPage() {
 		
@@ -19,14 +21,9 @@ public class ApplicationPanelPage {
 		return this;
 	}
 	
-	public AccountManagerLoginPage logout() {
-		DriverManager.getDriver().findElement(textusername).click();
-		DriverManager.getDriver().findElement(linkLogout).click();
+	public AccountManagerLoginPage logout() throws Exception {
+		click(textusername, WaitStrategy.CLICKABLE," Username In Application Panel");
+		click(linkLogout, WaitStrategy.CLICKABLE," Logout Button");
 		return new AccountManagerLoginPage();
 	}
-	
-	
-	
-	
-
 }
