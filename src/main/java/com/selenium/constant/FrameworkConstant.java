@@ -1,5 +1,8 @@
 package com.selenium.constant;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import com.selenium.enus.ConfigProperties;
 import com.selenium.utils.PropertyUtils;
 
@@ -15,7 +18,12 @@ public class FrameworkConstant {
 	private static final int EXPLICITWAIT=10;
 	private static final String EXTENTREPORTPATH=System.getProperty("user.dir")+"/extent-test-output/";
 	private static String extentReportFilePath="";
+	private static String EXCELPATH=BASEPATH+"/excel/Testdata.xlsx";
 	
+	public static String getExcelPath() {
+		return EXCELPATH;
+	}
+
 	public static String getExtentReportFilePath() throws Exception {
 		if(extentReportFilePath.isEmpty()) {
 			extentReportFilePath=createReportPath();
@@ -25,7 +33,9 @@ public class FrameworkConstant {
 	
 	private static String createReportPath() throws Exception {
 		if(PropertyUtils.getValue(ConfigProperties.OVERRIDEREPORT).equalsIgnoreCase("no")) {
-			return EXTENTREPORTPATH+System.currentTimeMillis()+"/index.html";
+			String timestamp=new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime()).replaceAll(":", "-");
+			return EXTENTREPORTPATH+timestamp+"/index.html";
+			//return EXTENTREPORTPATH+System.currentTimeMillis()+"/index.html";
 		}else {
 			return EXTENTREPORTPATH+"/index.html";
 		}

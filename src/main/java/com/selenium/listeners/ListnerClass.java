@@ -28,10 +28,6 @@ public class ListnerClass implements ITestListener,ISuiteListener {
 	public void onTestFailure(ITestResult result) {
 		try {
 			ExtentLogger.fail(result.getMethod().getMethodName() + " is Failed" + result.getThrowable().toString(),true);
-			//ExtentLogger.fail(result.getThrowable().toString());
-			//ExtentLogger.fail(Arrays.toString(result.getThrowable().getStackTrace()));
-			
-			//
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

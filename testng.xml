@@ -2,6 +2,7 @@
 <suite name="Suite">
 	<listeners>
     	<listener class-name="com.selenium.listeners.ListnerClass" />
+    	<listener class-name="com.selenium.listeners.MethodInterceptor" />
     </listeners>
   <test thread-count="1" name="Test" parallel="methods">
     <classes>

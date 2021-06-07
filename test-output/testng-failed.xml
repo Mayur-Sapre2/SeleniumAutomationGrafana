@@ -3,12 +3,14 @@
 <suite name="Failed suite [Suite]">
   <listeners>
     <listener class-name="com.selenium.listeners.ListnerClass"/>
+    <listener class-name="com.selenium.listeners.MethodInterceptor"/>
   </listeners>
   <test thread-count="5" name="Test(failed)" parallel="methods">
     <classes>
       <class name="com.selenium.AccountManagerLoginPageTest">
         <methods>
-          <include name="loginlogoutTest" invocation-numbers="1"/>
+          <include name="loginlogoutTest" invocation-numbers="0 0 0"/>
+          <include name="newtest" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="tearDown"/>
         </methods>

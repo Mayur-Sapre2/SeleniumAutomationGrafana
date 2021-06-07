@@ -1,9 +1,11 @@
 package com.selenium;
 
-import org.testng.annotations.DataProvider;
+import java.util.Map;
+
 import org.testng.annotations.Test;
 
 import com.selenium.pages.AccountManagerLoginPage;
+import com.selenium.utils.DataProviderUtils;
 
 public class AccountManagerLoginPageTest extends BaseTest {
 
@@ -11,24 +13,26 @@ public class AccountManagerLoginPageTest extends BaseTest {
 		
 	}
 	
-	@Test(dataProvider = "LoginData")
-	public void loginlogoutTest(String username,String password) throws Exception {		
+	@Test(dataProvider="getData",dataProviderClass=DataProviderUtils.class)
+	public void loginlogoutTest(Map<String,String> data) throws Exception {		
 		//ExtentReport.createTest("loginLogoutTest");
-		new AccountManagerLoginPage(). enterUserName(username)
+		new AccountManagerLoginPage(). enterUserName(data.get("username"))
 				.clickContinue()
-				.enterPassword(password)
+				.enterPassword(data.get("password"))
 				.clickLoginBtn()
 				.verifyApplicationPanelText()
 				.logout();
 	}
 	
-	@DataProvider(name="LoginData",parallel=true)
-	public Object[][] getData(){
-		return new Object[][] {
-			{"QATHOR1005MIG","ThorMigration@12345"},
-			{"mayur.sapre","Test@123"}
-		};
+	@Test(dataProvider="getData",dataProviderClass=DataProviderUtils.class)
+	public void newtest(Map<String,String> data) throws Exception {		
+		//ExtentReport.createTest("loginLogoutTest");
+		new AccountManagerLoginPage(). enterUserName(data.get("username"))
+				.clickContinue()
+				.enterPassword(data.get("password"))
+				.clickLoginBtn()
+				.verifyApplicationPanelText()
+				.logout();
 	}
-	
 }
 
