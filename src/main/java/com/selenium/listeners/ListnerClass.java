@@ -16,7 +16,7 @@ public class ListnerClass implements ITestListener,ISuiteListener {
 	@Override
 	public void onTestStart(ITestResult result) {
 		//BeforeMethod
-		ExtentReport.createTest(result.getMethod().getMethodName());
+		ExtentReport.createTest(result.getMethod().getDescription());
 	}
 
 	@Override

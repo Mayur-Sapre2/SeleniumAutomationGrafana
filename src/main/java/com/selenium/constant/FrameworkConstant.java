@@ -19,7 +19,19 @@ public class FrameworkConstant {
 	private static final String EXTENTREPORTPATH=System.getProperty("user.dir")+"/extent-test-output/";
 	private static String extentReportFilePath="";
 	private static String EXCELPATH=BASEPATH+"/excel/Testdata.xlsx";
+	private static String RUNMANAGERSHEET="RUNMANAGER";
 	
+	private static String DATASHEET="DATA";
+	
+	
+	public static String getRunManagerSheet() {
+		return RUNMANAGERSHEET;
+	}
+	
+	public static String getDataSheet() {
+		return DATASHEET;
+	}
+
 	public static String getExcelPath() {
 		return EXCELPATH;
 	}

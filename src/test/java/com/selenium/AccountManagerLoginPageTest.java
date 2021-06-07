@@ -4,6 +4,7 @@ import java.util.Map;
 
 import org.testng.annotations.Test;
 
+import com.selenium.listeners.RetryFailedTest;
 import com.selenium.pages.AccountManagerLoginPage;
 import com.selenium.utils.DataProviderUtils;
 
@@ -13,7 +14,7 @@ public class AccountManagerLoginPageTest extends BaseTest {
 		
 	}
 	
-	@Test(dataProvider="getData",dataProviderClass=DataProviderUtils.class)
+	@Test
 	public void loginlogoutTest(Map<String,String> data) throws Exception {		
 		//ExtentReport.createTest("loginLogoutTest");
 		new AccountManagerLoginPage(). enterUserName(data.get("username"))
@@ -24,7 +25,7 @@ public class AccountManagerLoginPageTest extends BaseTest {
 				.logout();
 	}
 	
-	@Test(dataProvider="getData",dataProviderClass=DataProviderUtils.class)
+	@Test
 	public void newtest(Map<String,String> data) throws Exception {		
 		//ExtentReport.createTest("loginLogoutTest");
 		new AccountManagerLoginPage(). enterUserName(data.get("username"))

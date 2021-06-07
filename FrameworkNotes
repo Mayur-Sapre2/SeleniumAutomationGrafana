@@ -1,0 +1,11 @@
+1. Always define constant variables in FrameworkConstant class and use it by getters
+2. Manage passed,failed,skipped screenshots by property file
+3. Retry mechanism is optional,i will suggest to not use same for better ROI.
+4. Always declare constant in Uppercase
+5. Never Hardcode anything,do it by define variable and use as getter method
+6. Listeners-IMethodInterceptor,IAnnotationTransformer,IRetryAnalyzer
+7. Use Method chaining approach for better code understanding
+8. Mention common methods in Basepage class
+9. We are using single DP for all testmethods,Excel to Hashmap
+10. If any excel cell is empty,add single quote(') in that cell to avoid NPE
+11. When reading integer,decimal from excel cell,append single quote before to convert it to string.
