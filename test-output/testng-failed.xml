@@ -10,7 +10,7 @@
     <classes>
       <class name="com.selenium.AccountManagerLoginPageTest">
         <methods>
-          <include name="newtest" invocation-numbers="1 1"/>
+          <include name="newtest" invocation-numbers="0 1"/>
           <include name="setup"/>
           <include name="tearDown"/>
         </methods>

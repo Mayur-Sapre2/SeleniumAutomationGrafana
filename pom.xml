@@ -47,6 +47,13 @@
 			<url>http://dl.bintray.com/epam/reportportal</url>
 		</repository>
 	</repositories>
+	
+	<pluginRepositories>
+ 		<pluginRepository>
+ 		<id>bintray-healenium</id>
+		<url>http://dl.bintray.com/epam/healenium</url>
+ 		</pluginRepository>
+	</pluginRepositories>
 
 	<dependencies>
 
@@ -77,6 +84,14 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.0.0-alpha-1</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-server</artifactId>
+    <version>4.0.0-alpha-1</version>
+</dependency>
+		
 
 		<!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
 		<dependency>
@@ -194,6 +209,44 @@
 			<version>1.5</version>
 		</dependency>
 	
+		<dependency>
+			<groupId>com.epam.healenium</groupId>
+			<artifactId>healenium-web</artifactId>
+			<version>3.1</version>
+		</dependency>
+	  
+	  	<!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+		<dependency>
+    		<groupId>com.github.javafaker</groupId>
+    		<artifactId>javafaker</artifactId>
+    		<version>1.0.2</version>
+		</dependency>
+		
+				<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>4.2.0</version>
+</dependency>
+
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>4.2.0</version>   
+</dependency>
+
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-picocontainer</artifactId>
+    <version>4.2.0</version>
+    <scope>test</scope>
+</dependency>
+
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-jvm-deps</artifactId>
+    <version>1.0.6</version>
+    <scope>provided</scope>
+</dependency> 
 	  
 	  
 	</dependencies>

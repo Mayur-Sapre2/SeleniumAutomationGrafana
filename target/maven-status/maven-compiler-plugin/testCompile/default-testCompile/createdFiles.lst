@@ -1,0 +1,6 @@
+com\selenium\BaseTest.class
+com\selenium\AccountManagerLoginPageTest.class
+com\selenium\SelfHeal.class
+com\selenium\HomePageTest.class
+com\selenium\Report.class
+com\selenium\LoginPageTest.class

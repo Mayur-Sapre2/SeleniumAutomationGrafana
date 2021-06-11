@@ -4,6 +4,7 @@ import java.util.Objects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.selenium.constant.FrameworkConstant;
 import com.selenium.enus.ConfigProperties;
@@ -15,12 +16,18 @@ public final class Driver {
 		
 	}
 
-	public static void initDriver() throws Exception {
+	public static void initDriver(String browser) throws Exception {
 		if(Objects.isNull(DriverManager.getDriver())) {
-			System.setProperty("webdriver.chrome.driver",FrameworkConstant.getChromedriverpath());
-			WebDriver driver=new ChromeDriver();
-			driver.manage().window().maximize();
-			DriverManager.setDriver(driver);
+			if(browser.equalsIgnoreCase("chrome")) {
+				System.setProperty("webdriver.chrome.driver",FrameworkConstant.getChromedriverpath());
+				DriverManager.setDriver(new ChromeDriver());
+				DriverManager.getDriver().manage().window().maximize();
+			}
+			else if(browser.equalsIgnoreCase("firefox")) {
+				System.setProperty("webdriver.gecko.driver",FrameworkConstant.getGeckodriverpath());
+				DriverManager.setDriver(new FirefoxDriver());
+				DriverManager.getDriver().manage().window().maximize();
+			}
 			DriverManager.getDriver().get(PropertyUtils.getValue(ConfigProperties.URL));
 		}
 	}

@@ -1,7 +1,9 @@
 package com.selenium.constant;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import com.selenium.enus.ConfigProperties;
 import com.selenium.utils.PropertyUtils;
@@ -14,8 +16,9 @@ public class FrameworkConstant {
 	
 	private static final String BASEPATH=System.getProperty("user.dir")+"\\src\\test\\resources\\";
 	private static final String CHROMEDRIVERPATH=BASEPATH+"/executables/chromedriver.exe";
+	private static final String GECKODRIVERPATH=BASEPATH+"/executables/geckodriver.exe";
 	private static final String CONFIGPATH=BASEPATH+"/config/config.properties";
-	private static final int EXPLICITWAIT=10;
+	private static final int EXPLICITWAIT=50;
 	private static final String EXTENTREPORTPATH=System.getProperty("user.dir")+"/extent-test-output/";
 	private static String extentReportFilePath="";
 	private static String EXCELPATH=BASEPATH+"/excel/Testdata.xlsx";
@@ -45,8 +48,9 @@ public class FrameworkConstant {
 	
 	private static String createReportPath() throws Exception {
 		if(PropertyUtils.getValue(ConfigProperties.OVERRIDEREPORT).equalsIgnoreCase("no")) {
-			String timestamp=new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime()).replaceAll(":", "-");
-			return EXTENTREPORTPATH+timestamp+"/index.html";
+			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
+	        Date date = new Date();
+			return EXTENTREPORTPATH+dateFormat.format(date)+"/index.html";
 			//return EXTENTREPORTPATH+System.currentTimeMillis()+"/index.html";
 		}else {
 			return EXTENTREPORTPATH+"/index.html";
@@ -66,6 +70,11 @@ public class FrameworkConstant {
 	public static String getChromedriverpath() {
 		return CHROMEDRIVERPATH;
 	}
+	
+	public static String getGeckodriverpath() {
+		return GECKODRIVERPATH;
+	}
+	
 	public static String getConfigpath() {
 		return CONFIGPATH;
 	}

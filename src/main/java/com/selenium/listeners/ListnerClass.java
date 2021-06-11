@@ -8,6 +8,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.selenium.annotations.FrameworkAnnotation;
 import com.selenium.reports.ExtentLogger;
 import com.selenium.reports.ExtentReport;
 
@@ -17,6 +18,8 @@ public class ListnerClass implements ITestListener,ISuiteListener {
 	public void onTestStart(ITestResult result) {
 		//BeforeMethod
 		ExtentReport.createTest(result.getMethod().getDescription());
+		ExtentReport.addAuthors(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotation.class).author());
+		ExtentReport.addCategories(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotation.class).category());
 	}
 
 	@Override

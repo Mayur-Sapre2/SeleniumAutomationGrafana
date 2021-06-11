@@ -19,10 +19,8 @@ public final class PropertyUtils {
 	private static final Map<String,String> CONFIGMAP=new HashMap();
 	
 	static {
-		try {
-			FileInputStream fis=new FileInputStream(FrameworkConstant.getConfigpath());
+		try(FileInputStream fis=new FileInputStream(FrameworkConstant.getConfigpath())) {
 			prop.load(fis);
-			
 			for(Map.Entry<Object, Object> entry: prop.entrySet()) {
 				CONFIGMAP.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue()).trim());
 			}

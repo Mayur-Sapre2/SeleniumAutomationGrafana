@@ -19,9 +19,10 @@ public final class ExcelUtils {
 		
 	}
 	
+	//Try with Resoures
 	public static List<Map<String,String>> getTestDetails(String sheetname){
 		List<Map<String,String>> list = null;
-
+		
 		try(FileInputStream fs = new FileInputStream(FrameworkConstant.getExcelPath())) {
 
 			XSSFWorkbook workbook = new XSSFWorkbook(fs);

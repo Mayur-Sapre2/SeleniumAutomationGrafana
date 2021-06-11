@@ -1,6 +1,6 @@
 package com.selenium;
 
-import java.lang.reflect.Method;
+import java.util.Map;
 
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -14,9 +14,11 @@ public class BaseTest {
 		
 	}
 	
+	@SuppressWarnings("unchecked")
 	@BeforeMethod
-	protected void setup(Method m) throws Exception {
-		Driver.initDriver();
+	protected void setup(Object[] data) throws Exception {
+		Map<String,String> map=(Map<String,String>)data[0];
+		Driver.initDriver(map.get("browser"));
 	}
 
 	@AfterMethod
