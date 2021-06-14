@@ -8,6 +8,7 @@ import java.util.Properties;
 
 import com.selenium.constant.FrameworkConstant;
 import com.selenium.enus.ConfigProperties;
+import com.selenium.exceptions.PropertyFileUsageException;
 
 public final class PropertyUtils {
 
@@ -30,9 +31,9 @@ public final class PropertyUtils {
 		}
 	}
 	
-	public static String getValue(ConfigProperties key) throws Exception {
+	public static String getValue(ConfigProperties key){
 		if(Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.name().toLowerCase()))){
-			throw new Exception("Property Name " + key + "is not found.Please check in config.properties");
+			throw new PropertyFileUsageException("Property Name " + key + "is not found.Please check in config.properties");
 		}
 		return CONFIGMAP.get(key.name().toLowerCase());
 	}

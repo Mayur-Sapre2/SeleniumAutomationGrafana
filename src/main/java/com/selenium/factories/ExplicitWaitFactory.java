@@ -9,7 +9,11 @@ import com.selenium.constant.FrameworkConstant;
 import com.selenium.driver.DriverManager;
 import com.selenium.enus.WaitStrategy;
 
-public class ExplicitWaitFactory {
+public final class ExplicitWaitFactory {
+	
+	private ExplicitWaitFactory() {
+		
+	}
 	
 	public static WebElement performExplicitWait(WaitStrategy waitstrategy,By by) {
 		WebElement element=null;

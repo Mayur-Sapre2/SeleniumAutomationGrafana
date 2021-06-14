@@ -16,7 +16,7 @@ public final class Driver {
 		
 	}
 
-	public static void initDriver(String browser) throws Exception {
+	public static void initDriver(String browser) {
 		if(Objects.isNull(DriverManager.getDriver())) {
 			if(browser.equalsIgnoreCase("chrome")) {
 				System.setProperty("webdriver.chrome.driver",FrameworkConstant.getChromedriverpath());

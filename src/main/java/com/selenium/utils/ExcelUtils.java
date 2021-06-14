@@ -3,6 +3,7 @@ package com.selenium.utils;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.InvalidPathException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,6 +13,8 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.selenium.constant.FrameworkConstant;
+import com.selenium.exceptions.FrameworkException;
+import com.selenium.exceptions.InvalidExcelPathException;
 
 public final class ExcelUtils {
 
@@ -22,7 +25,6 @@ public final class ExcelUtils {
 	//Try with Resoures
 	public static List<Map<String,String>> getTestDetails(String sheetname){
 		List<Map<String,String>> list = null;
-		
 		try(FileInputStream fs = new FileInputStream(FrameworkConstant.getExcelPath())) {
 
 			XSSFWorkbook workbook = new XSSFWorkbook(fs);
@@ -45,9 +47,9 @@ public final class ExcelUtils {
 			}
 
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			throw new InvalidExcelPathException("Excel file not found");
 		} catch (IOException e) {
-			e.printStackTrace();
+			throw new FrameworkException("some IO exception found while reading file");
 		}
 		System.out.println(list);
 		return list;

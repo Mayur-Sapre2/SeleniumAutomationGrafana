@@ -22,7 +22,7 @@ public final class DataProviderUtils {
 		List<Map<String, String>> itr_list=new ArrayList<>();
 		for(int i=0;i<list.size();i++) {
 			if(list.get(i).get("testname").equalsIgnoreCase(testname) &&
-				list.get(i).get("execute").equalsIgnoreCase("yes")){
+				list.get(i).get("run").equalsIgnoreCase("yes")){
 					itr_list.add(list.get(i));
 				}
 			}

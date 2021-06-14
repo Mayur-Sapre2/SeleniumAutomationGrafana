@@ -29,12 +29,7 @@ public class ListnerClass implements ITestListener,ISuiteListener {
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		try {
 			ExtentLogger.fail(result.getMethod().getMethodName() + " is Failed" + result.getThrowable().toString(),true);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 
 	@Override
@@ -44,27 +39,12 @@ public class ListnerClass implements ITestListener,ISuiteListener {
 
 	@Override
 	public void onStart(ITestContext context) {
-		// Beforesuite
-		try {
-			ExtentReport.initReports();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		ExtentReport.initReports();
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
-		//AfterSuite
-		try {
 			ExtentReport.flushReports();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 	
 }

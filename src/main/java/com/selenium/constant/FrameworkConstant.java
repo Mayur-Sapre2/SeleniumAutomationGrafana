@@ -39,14 +39,14 @@ public class FrameworkConstant {
 		return EXCELPATH;
 	}
 
-	public static String getExtentReportFilePath() throws Exception {
+	public static String getExtentReportFilePath(){
 		if(extentReportFilePath.isEmpty()) {
 			extentReportFilePath=createReportPath();
 		}
 		return extentReportFilePath;
 	}
 	
-	private static String createReportPath() throws Exception {
+	private static String createReportPath(){
 		if(PropertyUtils.getValue(ConfigProperties.OVERRIDEREPORT).equalsIgnoreCase("no")) {
 			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
 	        Date date = new Date();
