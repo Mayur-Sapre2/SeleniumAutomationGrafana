@@ -1,19 +1,12 @@
 package com.selenium.driver;
 
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Objects;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.BrowserType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
 import com.selenium.enus.ConfigProperties;
+import com.selenium.exceptions.BrowserInvocationFailedException;
+import com.selenium.factories.DriverFactory;
 import com.selenium.utils.PropertyUtils;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
  * Driver class is repsonsible for invoking and closing the browsers.
@@ -48,39 +41,11 @@ public final class Driver {
 	public static void initDriver(String browser) {
 		String runmode=PropertyUtils.getValue(ConfigProperties.RUNMODE);
 		if(Objects.isNull(DriverManager.getDriver())) {
-			if(browser.equalsIgnoreCase("chrome")) {
-				WebDriverManager.chromedriver().setup();
-				if(runmode.equalsIgnoreCase("remote")) {
-					DesiredCapabilities cap=new DesiredCapabilities();
-					cap.setBrowserName(BrowserType.CHROME);
-					try {
-						DriverManager.setDriver(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap));
-					} catch (MalformedURLException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
-				else{
-					DriverManager.setDriver(new ChromeDriver());
-					DriverManager.getDriver().manage().window().maximize();
-				}
+			try {
+				DriverManager.setDriver(DriverFactory.getDriver(browser));
 			}
-			else if(browser.equalsIgnoreCase("firefox")) {
-				WebDriverManager.firefoxdriver().setup();
-				if(runmode.equalsIgnoreCase("remote")) {
-					DesiredCapabilities cap=new DesiredCapabilities();
-					cap.setBrowserName(BrowserType.FIREFOX);
-					try {
-						DriverManager.setDriver(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap));
-					} catch (MalformedURLException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
-				else {
-					DriverManager.setDriver(new FirefoxDriver());
-					DriverManager.getDriver().manage().window().maximize();
-				}
+			catch(MalformedURLException e) {
+				throw new BrowserInvocationFailedException("Browser invocation failed.Please check capabilities");
 			}
 			DriverManager.getDriver().get(PropertyUtils.getValue(ConfigProperties.URL));
 		}
