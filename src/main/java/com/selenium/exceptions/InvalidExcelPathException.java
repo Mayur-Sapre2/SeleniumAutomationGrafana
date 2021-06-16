@@ -1,6 +1,8 @@
 package com.selenium.exceptions;
 
-public class InvalidExcelPathException extends FrameworkException {
+import java.nio.file.InvalidPathException;
+
+public class InvalidExcelPathException extends InavalidPathForFilesException {
 
 	public InvalidExcelPathException(String message) {
 		super(message);

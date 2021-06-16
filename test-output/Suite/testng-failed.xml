@@ -3,16 +3,18 @@
 <suite name="Failed suite [Suite]">
   <listeners>
     <listener class-name="com.selenium.listeners.ListnerClass"/>
+    <listener class-name="com.selenium.listeners.MethodInterceptor"/>
+    <listener class-name="com.selenium.listeners.AnnotationTransformer"/>
   </listeners>
   <test thread-count="5" name="Test(failed)" parallel="methods">
     <classes>
-      <class name="com.selenium.runner.TestRunner">
+      <class name="com.selenium.AdminConsolePageTest">
         <methods>
-          <include name="feature"/>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="verifyNewUser" invocation-numbers="0 0"/>
         </methods>
-      </class> <!-- com.selenium.runner.TestRunner -->
+      </class> <!-- com.selenium.AdminConsolePageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

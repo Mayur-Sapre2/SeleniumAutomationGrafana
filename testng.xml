@@ -2,14 +2,13 @@
 <suite name="Suite">
 	<listeners>
     	<listener class-name="com.selenium.listeners.ListnerClass" />
-    	<!-- <listener class-name="com.selenium.listeners.MethodInterceptor" />
-    	<listener class-name="com.selenium.listeners.AnnotationTransformer" /> -->
+    	<listener class-name="com.selenium.listeners.MethodInterceptor" />
+    	<listener class-name="com.selenium.listeners.AnnotationTransformer" />
     </listeners>
   <test thread-count="1" name="Test" parallel="methods">
     <classes>
-      <!-- <class name="com.selenium.AccountManagerLoginPageTest"/>
-      <class name="com.selenium.AdminConsolePageTest"/> -->
-      <class name="com.selenium.runner.TestRunner"/>
+      <class name="com.selenium.AdminConsolePageTest"/>
+      <!--<class name="com.selenium.runner.TestRunner"/>-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
