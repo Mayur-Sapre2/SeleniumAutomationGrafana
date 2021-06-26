@@ -38,11 +38,11 @@ public final class Driver {
 	 * @param browser value will be pass from {@link com.selenium.BaseTest}.Values: Chrome,Firefox
 	 * 
 	 */
-	public static void initDriver(String browser) {
+	public static void initDriver(String browser,String version) {
 		String runmode=PropertyUtils.getValue(ConfigProperties.RUNMODE);
 		if(Objects.isNull(DriverManager.getDriver())) {
 			try {
-				DriverManager.setDriver(DriverFactory.getDriver(browser));
+				DriverManager.setDriver(DriverFactory.getDriver(browser,version));
 			}
 			catch(MalformedURLException e) {
 				throw new BrowserInvocationFailedException("Browser invocation failed.Please check capabilities");
