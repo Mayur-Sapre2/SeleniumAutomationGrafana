@@ -5,14 +5,24 @@
     <listener class-name="com.selenium.listeners.ListnerClass"/>
     <listener class-name="com.selenium.listeners.MethodInterceptor"/>
     <listener class-name="com.selenium.listeners.AnnotationTransformer"/>
+    <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)" parallel="methods">
     <classes>
+      <class name="com.selenium.AccountManagerLoginPageTest">
+        <methods>
+          <include name="loginlogoutTest" invocation-numbers="0 1 2 0 1 2"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="deleteElasticSearchIndex"/>
+        </methods>
+      </class> <!-- com.selenium.AccountManagerLoginPageTest -->
       <class name="com.selenium.AdminConsolePageTest">
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="verifyNewUser" invocation-numbers="0"/>
+          <include name="verifyNewUser" invocation-numbers="0 1 2"/>
+          <include name="deleteElasticSearchIndex"/>
         </methods>
       </class> <!-- com.selenium.AdminConsolePageTest -->
     </classes>

@@ -11,6 +11,7 @@ import org.testng.ITestResult;
 import com.selenium.annotations.FrameworkAnnotation;
 import com.selenium.reports.ExtentLogger;
 import com.selenium.reports.ExtentReport;
+import com.selenium.utils.ELKUtils;
 
 public class ListnerClass implements ITestListener,ISuiteListener {
 
@@ -25,16 +26,19 @@ public class ListnerClass implements ITestListener,ISuiteListener {
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		ExtentLogger.pass(result.getMethod().getMethodName() + " is Passed");
+		ELKUtils.sendDetailsToELK(result.getMethod().getDescription(),"pass");
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-			ExtentLogger.fail(result.getMethod().getMethodName() + " is Failed" + result.getThrowable().toString(),true);
+		ExtentLogger.fail(result.getMethod().getMethodName() + " is Failed" + result.getThrowable().toString(),true);
+		ELKUtils.sendDetailsToELK(result.getMethod().getDescription(),"fail");
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		ExtentLogger.skip(result.getMethod().getMethodName() + " is Skipped");
+		ELKUtils.sendDetailsToELK(result.getMethod().getDescription(),"skip");
 	}
 
 	@Override
