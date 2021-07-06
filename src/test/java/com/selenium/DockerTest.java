@@ -24,22 +24,15 @@ import com.google.common.util.concurrent.Uninterruptibles;
  * @since 1.0
  */
 public class DockerTest {
-
-	@Test(dataProvider = "getData")
-	public void dockerTest(String browser,String version) throws MalformedURLException {
-		DesiredCapabilities cap=new DesiredCapabilities();
-		cap.setVersion(version);
-		cap.setBrowserName(browser);
-		WebDriver driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap);
-		driver.get("http://www.google.com");
-		System.out.println("Title is"+driver.getTitle());
-		Uninterruptibles.sleepUninterruptibly(5, TimeUnit.SECONDS);
-		driver.quit();
-	}
-	
-	@DataProvider(parallel = true)
-	public Object[][] getData(){
-		return new Object[][] {{"chrome","91.0.4472.77"},{"chrome","79.0.3945.117"},{"firefox","89.0"},{"firefox","89.0"}};
-	}
-		
+	/*
+	 * @Test public void dockerTest() throws MalformedURLException {
+	 * DesiredCapabilities cap=new DesiredCapabilities();
+	 * cap.setBrowserName(BrowserType.CHROME); cap.setCapability("enableVNC", );
+	 * cap.setCapability("enableVideo", true); cap.setCapability("videoName",
+	 * "Test Video"); WebDriver driver=new RemoteWebDriver(new
+	 * URL("http://localhost:4444/wd/hub"),cap);
+	 * driver.get("http://www.google.com");
+	 * System.out.println("Title is"+driver.getTitle());
+	 * Uninterruptibles.sleepUninterruptibly(5, TimeUnit.SECONDS); driver.quit(); }
+	 */
 }

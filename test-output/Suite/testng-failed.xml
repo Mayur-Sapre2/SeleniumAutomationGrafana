@@ -11,20 +11,12 @@
     <classes>
       <class name="com.selenium.AccountManagerLoginPageTest">
         <methods>
-          <include name="loginlogoutTest" invocation-numbers="0 1 2 0 1 2"/>
+          <include name="loginlogoutTest" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="tearDown"/>
           <include name="deleteElasticSearchIndex"/>
         </methods>
       </class> <!-- com.selenium.AccountManagerLoginPageTest -->
-      <class name="com.selenium.AdminConsolePageTest">
-        <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="verifyNewUser" invocation-numbers="0 1 2"/>
-          <include name="deleteElasticSearchIndex"/>
-        </methods>
-      </class> <!-- com.selenium.AdminConsolePageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

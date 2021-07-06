@@ -37,7 +37,7 @@ public class ELKUtils {
 		.log()
 		.all()
 		.body(map)
-		.post("http://localhost:9200/suite/result");
+		.post(PropertyUtils.getValue(ConfigProperties.ELASTICSEARCHURL));
 		
 		Assert.assertEquals(response.statusCode(), 201);
 		response.prettyPrint();
@@ -48,7 +48,7 @@ public class ELKUtils {
 		if(PropertyUtils.getValue(ConfigProperties.SENDRESULTOKIBANA).equalsIgnoreCase("yes")){
 		
 		Response response=given()
-		.delete("http://localhost:9200/suite");
+		.delete(PropertyUtils.getValue(ConfigProperties.ELASTICSEARCHDELETEURL));
 		
 		Assert.assertEquals(response.statusCode(), 200);
 		response.prettyPrint();

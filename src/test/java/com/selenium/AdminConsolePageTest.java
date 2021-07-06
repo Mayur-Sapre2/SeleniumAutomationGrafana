@@ -14,8 +14,6 @@ import com.selenium.utils.DeocdeUtils;
 
 public class AdminConsolePageTest extends BaseTest {
 	
-	Faker faker=new Faker();
-
 	private AdminConsolePageTest() {
 		
 	}
